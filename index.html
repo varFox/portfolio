@@ -2,9 +2,10 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
   <title>varFox</title>
+  <link rel="stylesheet" href="src/reset.css">
   <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:800|Lora:700|Open+Sans+Condensed:700" rel="stylesheet">
   <link rel="stylesheet" href="src/grid.min.css">
   <link rel="stylesheet" href="css/style.css">
@@ -30,8 +31,7 @@
     <div class="line-header"></div>
     <div class="container">
       <div class="row">
-        <div class="col-xl-2 col-md-2"></div>
-        <div class="col-xl-10 col-md-10">
+        <div class="col-xl-12 col-md-12">
           <h1>Любовь<span>Колегова</span></h1>
           <h3>Web-разработчик</h3>
           <button>Задать вопрос</button>
@@ -43,17 +43,69 @@
     </div>
   </header>
 
-  <section>
-
+  <section class="s1 about">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-1 col-md-1">
+          <h2>О себе</h2>
+        </div>
+        <div class="col-xl-7 col-md-7">
+          <p>Привет.</p>
+          <p>Меня зовут Любовь. Я живу в прекрасном городе Н.Новгороде. Занимаюсь разработкой с 2019 года.</p>
+          <p>Нужен сайт или он уже есть, но требуется доработка? Тогда ты не зря сюда попал. Я делаю сайты с нуля, помогаю в доработке. Мои сайты с адаптивным дизайном корректно отображаются на любом устройстве.</p>
+          <p>Может тебе нужен дизайнер или специалист по продвижению или может вообще не разбираешься во всём этом? И не надо, я всегда рада помочь. Мы вместе подробно разберём что нужно сделать, составим техническое задание и, если понадобится, то я сама найду нужного специалиста.</p>
+          <p>Моя цель: довольный заказчик и долгосрочные деловые отношения.</p>
+          <p>Закажите у меня сайт прямо сейчас и получите год бесплатного хостинга.</p>
+          <button>Перейти в контакты</button>
+        </div>
+        <div class="col-xl-4 col-md-4">
+          <div class="img-foto">
+            <img src="img/foto.jpg" alt="foto" class="foto">
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <section>
+  <section class="s2">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-12 col-md-12">
+          <h2>Проекты</h2>
+        </div>
+        <div class="col-xl-12 col-md-12">
+          <div class="works">
 
+            <div class="card-work">
+              <div class="info-work">
+                <h4 class="name-work">Название проекта</h4>
+                <p class="role">Моя роль</p>
+              </div>
+              
+              <div class="arrow"></div>  
+            </div><!--
+              
+            --><div class="card-work">
+              <div class="info-work">
+                <h4 class="name-work">Название проекта</h4>
+                <p class="role">Моя роль</p>
+              </div>
+              
+              <div class="arrow"></div>  
+            </div>       
+            
+            
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <footer>
-    foo
+  <footer id="footer">
+      
   </footer>
 
+
+  <script src="js/svgg.js"></script>
 </body>
 </html>
