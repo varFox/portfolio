@@ -1,12 +1,23 @@
-body, h1, h2, h3, span {
-  margin: 0;
-  padding: 0;
+.line(@width: 1000px) {
+  content: '';
+  position: absolute;
+  width: @width;
+  border-top: 1px solid #ff5300; 
 }
+.button(@bgc: #ff5300, @width: 360px) {
+  background-color: @bgc;
+  width: @width;
+  height: 60px;
+  font-size: 24px;
+  font-family: Open Sans Condensed;
+}
+
+
 button {
   border: none;
 }
 body {
-  background-color: #fff, #121212;
+  background-color: #121212;
   font-family: Lora;
   height: 3000px;
   h1 {
@@ -31,10 +42,12 @@ body {
 }
 
 header {
+  // display: none;
   width: 100%;
   height: 700px;
-  box-sizing: border-box;
-  background: #121212 url(/img/howling-red-557278-unsplash.jpg) no-repeat center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: #121212 url(/portfolio/img/howling-red-557278-unsplash.jpg) no-repeat center;
   background-size: cover;
   overflow: hidden;
   &::before {
@@ -51,6 +64,7 @@ header {
     height: 70px;
     position: fixed;
     z-index: 1000;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(20%, rgb(18, 18, 18)), to(rgba(18, 18, 18, 0.1)));
     background: linear-gradient(rgb(18, 18, 18) 20%, rgba(18, 18, 18, 0.1));
     &::before {
       content: '';
@@ -86,11 +100,7 @@ header {
     z-index: 1001;
   }
   button {
-    background-color: #00AB6F;
-    width: 360px;
-    height: 70px;
-    font-size: 24px;
-    font-family: Open Sans Condensed;
+    .button(#00AB6F);
     margin-top: 40px;
   }
 .logo {
@@ -102,4 +112,154 @@ header {
   font-size: 265px;
   font-family: Alegreya Sans SC;
 }
+}
+
+
+section, footer {
+  padding: 100px 0;
+  position: relative;
+  color: #fff;
+  overflow: hidden;
+  &::after {
+    .line(100%);
+    left: 0;
+    top: 0;
+
+  }
+  h2 {
+    font-family: Open Sans Condensed;
+    font-size: 70px;
+    color: #ff5300;
+    text-transform: uppercase;
+    line-height: 65px;
+    &::before {
+      .line();
+      bottom: 0;
+    }
+  }
+  h4 {
+    font-family: Open Sans Condensed;
+    font-size: 34px;
+  }
+}
+
+//первая секция
+.s1 {
+  // display: none;
+  h2 {
+    transform: rotate(-90deg) translateX(-190px);
+    transform-origin: top left;
+    width: 190px;
+  }
+  p {
+    text-align: right;
+    margin-bottom: 20px;
+  }
+  .img-foto {
+    &::after {
+      .line();
+      transform: rotate(-90deg) translateX(3px);
+      transform-origin: top left;
+    }
+    &::before {
+      .line();
+      transform: rotate(-90deg);
+      transform-origin: top right;
+      right: 15px;
+    }
+  }
+  button {
+    .button;
+    float: right;
+    margin-top: 15px;
+  }
+}
+
+
+//вторая секция
+.s2 {
+  h2 {
+    float: right;
+  }
+  .works {
+    margin-top: 50px;
+    
+    .card-work {
+      position: relative;
+      border: 1px solid #ff5300;
+      display: inline-block;
+      width: 50%;
+      padding: 45px;
+      // animation: bgcard 1.5s infinite linear;
+      &:nth-child(2n) {
+        margin-left: -1px;
+      }
+      &:hover::before {
+        // display: none;
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, .9);
+      }
+      .info-work {
+        position: relative;
+        height: 70px;
+        h4 {
+          top: 0;
+        }
+        p {
+          bottom: 0;
+        }
+      }
+    }
+  }
+  p {
+    position: absolute;
+    font-size: 24px;
+    color: #ff5300;
+  }
+  h4 {
+    position: absolute;
+  }
+  .arrow {
+    width: 140px;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: ~"calc(15% - 20px)" 0;
+    padding-right: 20px;
+    text-align: right;
+    transition: .5s linear;
+    &:hover {
+      animation: arrow 1.5s infinite linear;
+    }
+  }
+}
+
+@keyframes arrow {
+  0% {
+    padding-right: 20px;
+  }
+  50% {
+    padding-right: 40px;
+  }
+  100% {
+    padding-right: 20px;
+  }
+}
+
+@keyframes bgcard {
+  0% {
+    background-position-y: 0;
+  }
+  50% {
+    background-position-y: 100%;
+  }
+  100% {
+    background-position-y: 0;
+  }
 }

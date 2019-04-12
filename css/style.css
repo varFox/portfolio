@@ -1,16 +1,8 @@
-body,
-h1,
-h2,
-h3,
-span {
-  margin: 0;
-  padding: 0;
-}
 button {
   border: none;
 }
 body {
-  background-color: #fff, #121212;
+  background-color: #121212;
   font-family: Lora;
   height: 3000px;
 }
@@ -36,8 +28,9 @@ body .container {
 header {
   width: 100%;
   height: 700px;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  background: #121212 url(/img/howling-red-557278-unsplash.jpg) no-repeat center;
+  background: #121212 url(/portfolio/img/howling-red-557278-unsplash.jpg) no-repeat center;
   background-size: cover;
   overflow: hidden;
 }
@@ -55,6 +48,7 @@ header nav {
   height: 70px;
   position: fixed;
   z-index: 1000;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(20%, #121212), to(rgba(18, 18, 18, 0.1)));
   background: linear-gradient(#121212 20%, rgba(18, 18, 18, 0.1));
 }
 header nav::before {
@@ -92,7 +86,7 @@ header .line-header {
 header button {
   background-color: #00AB6F;
   width: 360px;
-  height: 70px;
+  height: 60px;
   font-size: 24px;
   font-family: Open Sans Condensed;
   margin-top: 40px;
@@ -105,4 +99,155 @@ header .logo {
   text-align: center;
   font-size: 265px;
   font-family: Alegreya Sans SC;
+}
+section,
+footer {
+  padding: 100px 0;
+  position: relative;
+  color: #fff;
+  overflow: hidden;
+}
+section::after,
+footer::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  border-top: 1px solid #ff5300;
+  left: 0;
+  top: 0;
+}
+section h2,
+footer h2 {
+  font-family: Open Sans Condensed;
+  font-size: 70px;
+  color: #ff5300;
+  text-transform: uppercase;
+  line-height: 65px;
+}
+section h2::before,
+footer h2::before {
+  content: '';
+  position: absolute;
+  width: 1000px;
+  border-top: 1px solid #ff5300;
+  bottom: 0;
+}
+section h4,
+footer h4 {
+  font-family: Open Sans Condensed;
+  font-size: 34px;
+}
+.s1 h2 {
+  transform: rotate(-90deg) translateX(-190px);
+  transform-origin: top left;
+  width: 190px;
+}
+.s1 p {
+  text-align: right;
+  margin-bottom: 20px;
+}
+.s1 .img-foto::after {
+  content: '';
+  position: absolute;
+  width: 1000px;
+  border-top: 1px solid #ff5300;
+  transform: rotate(-90deg) translateX(3px);
+  transform-origin: top left;
+}
+.s1 .img-foto::before {
+  content: '';
+  position: absolute;
+  width: 1000px;
+  border-top: 1px solid #ff5300;
+  transform: rotate(-90deg);
+  transform-origin: top right;
+  right: 15px;
+}
+.s1 button {
+  background-color: #ff5300;
+  width: 360px;
+  height: 60px;
+  font-size: 24px;
+  font-family: Open Sans Condensed;
+  float: right;
+  margin-top: 15px;
+}
+.s2 h2 {
+  float: right;
+}
+.s2 .works {
+  margin-top: 50px;
+}
+.s2 .works .card-work {
+  position: relative;
+  border: 1px solid #ff5300;
+  display: inline-block;
+  width: 50%;
+  padding: 45px;
+}
+.s2 .works .card-work:nth-child(2n) {
+  margin-left: -1px;
+}
+.s2 .works .card-work:hover::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+.s2 .works .card-work .info-work {
+  position: relative;
+  height: 70px;
+}
+.s2 .works .card-work .info-work h4 {
+  top: 0;
+}
+.s2 .works .card-work .info-work p {
+  bottom: 0;
+}
+.s2 p {
+  position: absolute;
+  font-size: 24px;
+  color: #ff5300;
+}
+.s2 h4 {
+  position: absolute;
+}
+.s2 .arrow {
+  width: 140px;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: calc(15% - 20px) 0;
+  padding-right: 20px;
+  text-align: right;
+  transition: .5s linear;
+}
+.s2 .arrow:hover {
+  animation: arrow 1.5s infinite linear;
+}
+@keyframes arrow {
+  0% {
+    padding-right: 20px;
+  }
+  50% {
+    padding-right: 40px;
+  }
+  100% {
+    padding-right: 20px;
+  }
+}
+@keyframes bgcard {
+  0% {
+    background-position-y: 0;
+  }
+  50% {
+    background-position-y: 100%;
+  }
+  100% {
+    background-position-y: 0;
+  }
 }
