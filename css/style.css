@@ -1,10 +1,35 @@
-button {
+button,
+button:active,
+button:focus {
   border: none;
+  outline: none;
+}
+input,
+input:focus,
+textarea,
+textaria:focus {
+  outline: none;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+}
+button:hover,
+.icon:hover {
+  filter: brightness(0.7);
 }
 body {
+  width: 100%;
+  height: 100%;
   background-color: #121212;
   font-family: Lora;
-  height: 3000px;
+  overflow: hidden;
+}
+body header,
+body section,
+body footer {
+  display: block;
+  position: relative;
 }
 body h1 {
   font-size: 150px;
@@ -25,12 +50,133 @@ body h3 {
 body .container {
   position: relative;
 }
+body svg {
+  fill: #ff5300;
+  width: 40px;
+  height: 40px;
+  stroke: #ff5300;
+}
+.humburger {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 70px;
+  height: 70px;
+  z-index: 1002;
+  transition: left 0.4s ease-in-out;
+}
+.humburger .line::after,
+.humburger .line::before {
+  content: '';
+  position: absolute;
+}
+.humburger .line,
+.humburger .line::after,
+.humburger .line::before {
+  width: 40px;
+  height: 3px;
+  background-color: #ff5300;
+}
+.humburger .line {
+  margin: auto;
+  margin-top: calc(50% - 1px);
+  width: 30px;
+}
+.humburger .line::after {
+  top: 22px;
+  left: 15px;
+  transition: transform 0.8s ease;
+}
+.humburger .line:before {
+  bottom: 22px;
+  left: 15px;
+  transition: transform 0.8s ease;
+}
+.humburger.active {
+  left: 230px;
+}
+.humburger.active .line,
+.humburger.active .line::after,
+.humburger.active .line::before {
+  background-color: #fff;
+}
+.humburger.active .line {
+  background-color: transparent;
+}
+.humburger.active .line::after {
+  transform: rotate(45deg);
+  top: 34px;
+}
+.humburger.active .line::before {
+  transform: rotate(-45deg);
+  bottom: 33px;
+}
+.toggle {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  transition: left 0.4s ease-in-out;
+}
+.toggle .sidebar {
+  position: fixed;
+  display: block;
+  left: -300px;
+  background-color: #121212;
+  width: 300px;
+  height: 100%;
+  box-sizing: border-box;
+  transition: left 0.4s ease-in-out;
+}
+.toggle .sidebar::before {
+  content: '';
+  position: absolute;
+  width: 4000px;
+  border-top: 1px solid #ff5300;
+  transform: rotate(-90deg);
+  transform-origin: top right;
+  right: 1px;
+  top: 0;
+}
+.toggle .sidebar .name {
+  width: 100%;
+  padding: 10px 30px;
+  font-family: Alegreya Sans SC;
+  font-size: 45px;
+  color: #ff5300;
+}
+.toggle .sidebar li {
+  padding: 10px 25px;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+.toggle .sidebar li::after {
+  content: '';
+  position: absolute;
+  width: 300px;
+  border-top: 1px solid #ff5300;
+  transform: rotate(180deg) translateY(-25px);
+  transform-origin: top left;
+  left: 0;
+  transition: left 0.8s ease;
+}
+.toggle .sidebar li:hover::after {
+  left: 300px;
+}
+.toggle.open-sidebar {
+  left: 300px;
+}
+.sidebar.open-sidebar {
+  left: 0;
+}
 header {
   width: 100%;
   height: 700px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  background: #121212 url(/portfolio/img/howling-red-557278-unsplash.jpg) no-repeat center;
+  background: #121212 url(/img/howling-red-557278-unsplash.jpg) no-repeat center;
   background-size: cover;
   overflow: hidden;
 }
@@ -70,7 +216,6 @@ header nav ul li {
   margin: 0 25px;
 }
 header nav ul a {
-  text-decoration: none;
   color: #fff;
   line-height: 70px;
 }
@@ -89,6 +234,7 @@ header button {
   height: 60px;
   font-size: 24px;
   font-family: Open Sans Condensed;
+  text-transform: uppercase;
   margin-top: 40px;
 }
 header .logo {
@@ -169,6 +315,7 @@ footer h4 {
   height: 60px;
   font-size: 24px;
   font-family: Open Sans Condensed;
+  text-transform: uppercase;
   float: right;
   margin-top: 15px;
 }
@@ -228,6 +375,71 @@ footer h4 {
 }
 .s2 .arrow:hover {
   animation: arrow 1.5s infinite linear;
+}
+footer h2 {
+  width: 320px;
+  transform: rotate(90deg) translateX(-68px);
+  transform-origin: bottom left;
+}
+footer h2::before {
+  display: none;
+}
+footer h2::after {
+  content: '';
+  position: absolute;
+  width: 1000px;
+  border-top: 1px solid #ff5300;
+  bottom: 0;
+  transform: rotate(180deg);
+  transform-origin: top left;
+}
+footer span {
+  display: block;
+  font-family: Open Sans Condensed;
+  font-size: 24px;
+  color: #ff5300;
+}
+footer form span {
+  text-align: right;
+}
+footer form {
+  margin-right: 50px;
+}
+footer input,
+footer textarea {
+  width: 100%;
+  padding: 15px;
+  background: transparent;
+  border: 1px solid #ff5300;
+  color: #ff5300;
+}
+footer textarea {
+  max-width: 100%;
+  min-width: 200px;
+  min-height: 100px;
+}
+footer .btn-form {
+  background-color: #ff5300;
+  width: 100%;
+  height: 60px;
+  font-size: 24px;
+  font-family: Open Sans Condensed;
+  text-transform: uppercase;
+}
+footer input,
+footer .btn-form,
+footer textarea {
+  margin-top: 20px;
+}
+footer p {
+  font-size: 24px;
+  margin: 10px 0 40px 0;
+}
+footer .icon {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  margin-right: 20px;
 }
 @keyframes arrow {
   0% {

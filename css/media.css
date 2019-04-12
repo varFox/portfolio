@@ -1,0 +1,46 @@
+@media screen and (max-width: 1024px) {
+  header h1,
+  header h3,
+  header button {
+    margin-left: 100px;
+  }
+  header h1 {
+    font-size: 100px;
+    line-height: 100px;
+    margin-top: 150px;
+  }
+  header h3 {
+    font-size: 24px;
+  }
+  header button {
+    width: 300px;
+    font-size: 18px;
+  }
+  header .logo {
+    bottom: -300px;
+    font-size: 200px;
+  }
+  .s1 p {
+    margin-left: 10px;
+  }
+  .s1 button {
+    width: 300px;
+    font-size: 18px;
+  }
+  .s2 .arrow {
+    padding: calc(15% - 8px) 0;
+    padding-right: 10px;
+    width: 100px;
+  }
+}
+@media screen and (max-width: 768px) {
+  header nav {
+    display: none;
+  }
+  .humburger {
+    display: block;
+  }
+}
+@media screen and (max-width: 479px) {
+  /* Target portrait smartphones */
+}

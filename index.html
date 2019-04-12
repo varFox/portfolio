@@ -9,9 +9,28 @@
   <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:800|Lora:700|Open+Sans+Condensed:700" rel="stylesheet">
   <link rel="stylesheet" href="src/grid.min.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/media.css">
   
 </head>
 <body>
+
+  
+
+    <div class="toggle">
+      <div class="sidebar">
+        <div class="name">varFox</div>
+        <ul>
+          <li><a href="#">Главная</a></li>
+          <li><a href="#">О себе</a></li>
+          <li><a href="#">Проекты</a></li>
+          <li><a href="#">Контакты</a></li>
+        </ul>
+      </div>
+      <div class="humburger">
+        <div class="line"></div>
+      </div>  
+    
+
 
   <header>
     <nav>
@@ -102,10 +121,38 @@
   </section>
 
   <footer id="footer">
-      
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-6 col-md-6">
+          <form id="contact-form" action="#">
+            <span>Есть вопрос или предложение?</span><span>Напиши мне</span>
+            <input type="text" placeholder="Имя">
+            <input type="email" placeholder="E-mail">
+            <textarea name="" id="" placeholder="Сообщение"></textarea>
+            <button class="btn-form">отправить</button>
+          </form>
+        </div>
+        <div class="col-xl-5 col-md-5">
+          <span>Телефон, Viber, WhatsApp:</span>
+          <p><a href="tel:+79047966201">+79047966201</a> </p>
+          <span>E-mail:</span>
+          <p><a href="mailto:varFox@list.ru">varFox@list.ru</a></p>
+          <div class="icons">
+            <div class="icon skype"><a href=""><img src="/src/icon/skype.png" alt="" srcset=""></a></div>
+            <div class="icon telegram"><a href=""><img src="/src/icon/telegram.png" alt="" srcset=""></a></div>
+            <div class="icon vk"><a href=""><img src="/src/icon/vk.png" alt="" srcset=""></a></div>
+            <div class="icon github"><a href=""><img src="/src/icon/github.svg" alt="" srcset=""></a></div>
+          </div>
+        </div>
+        <div class="col-xl-1 col-md-1">
+          <h2>Контакты</h2>
+        </div>
+      </div>
+    </div>
   </footer>
-
+</div>
 
   <script src="js/svgg.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
