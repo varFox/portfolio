@@ -4,7 +4,6 @@ let i = 1;
 works.forEach(item => {
   let imgWork = 'url("img/work' + i +'.jpg") no-repeat top';
   item.addEventListener('mouseover', function(e) {
-    console.log(item);
     item.style.background = imgWork;
     item.style.backgroundSize = 'cover';
     item.style.animation = 'bgcard 15s infinite linear';
@@ -13,8 +12,6 @@ works.forEach(item => {
     item.style.background = 'rgba(0, 0, 0, 0)';
     item.style.animation = 'none';
   })
-  
-  console.log(imgWork);
   i++;
 })
 

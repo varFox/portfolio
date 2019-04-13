@@ -1,3 +1,4 @@
+//mixin
 .line(@width: 1000px) {
   content: '';
   position: absolute;
@@ -13,6 +14,8 @@
   text-transform: uppercase;
 }
 
+
+//общие настройки для одинаковых элементов
 button, button:active, button:focus {
   border: none;
   outline: none;
@@ -66,6 +69,8 @@ body {
   }
 }
 
+
+//выдвиающееся меню для смартфонов
 .humburger {
   display: none;
   position: fixed;
@@ -173,12 +178,14 @@ body {
 }
 
 
+
+//бобошка
 header {
   width: 100%;
   height: 700px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background: #121212 url(/img/howling-red-557278-unsplash.jpg) no-repeat center;
+  background: #121212 url("../img/howling-red-557278-unsplash.jpg") no-repeat center;
   background-size: cover;
   overflow: hidden;
   &::before {
@@ -246,6 +253,7 @@ header {
 }
 
 
+//общие настройки 
 section, footer {
   padding: 100px 0;
   position: relative;
@@ -371,7 +379,6 @@ section, footer {
 
 //footer
 footer {
-  // padding-bottom: 100px;
   h2 {
     width: 320px;    
     transform: rotate(90deg) translateX(-68px);
@@ -429,6 +436,8 @@ footer {
 }
 
 
+
+//анимашка
 @keyframes arrow {
   0% {
     padding-right: 20px;
