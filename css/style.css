@@ -239,10 +239,11 @@ header button {
 }
 header .logo {
   position: absolute;
+  display: flex;
+  justify-content: center;
   bottom: -300px;
   width: 100%;
   color: rgba(191, 94, 48, 0.3);
-  text-align: center;
   font-size: 265px;
   font-family: Alegreya Sans SC;
 }
@@ -328,12 +329,9 @@ footer h4 {
 .s2 .works .card-work {
   position: relative;
   border: 1px solid #ff5300;
-  display: inline-block;
+  display: inline-flex;
   width: 50%;
   padding: 45px;
-}
-.s2 .works .card-work:nth-child(2n) {
-  margin-left: -1px;
 }
 .s2 .works .card-work:hover::before {
   content: '';
@@ -346,6 +344,7 @@ footer h4 {
 }
 .s2 .works .card-work .info-work {
   position: relative;
+  display: flex;
   height: 70px;
 }
 .s2 .works .card-work .info-work h4 {
@@ -359,21 +358,24 @@ footer h4 {
   font-size: 24px;
   color: #ff5300;
 }
-.s2 h4 {
-  position: absolute;
-}
 .s2 .arrow {
-  width: 140px;
+  width: 25%;
   height: 100%;
   position: absolute;
   right: 0;
   top: 0;
-  padding: calc(15% - 20px) 0;
-  padding-right: 20px;
-  text-align: right;
+}
+.s2 .arrow img {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+  right: 15px;
   transition: .5s linear;
 }
-.s2 .arrow:hover {
+.s2 .arrow img:hover {
   animation: arrow 1.5s infinite linear;
 }
 footer h2 {
@@ -401,9 +403,6 @@ footer span {
 }
 footer form span {
   text-align: right;
-}
-footer form {
-  margin-right: 50px;
 }
 footer input,
 footer textarea {
@@ -439,17 +438,17 @@ footer .icon {
   width: 50px;
   height: 50px;
   display: inline-block;
-  margin-right: 20px;
+  margin: 0 10px;
 }
 @keyframes arrow {
   0% {
-    padding-right: 20px;
+    right: 15px;
   }
   50% {
-    padding-right: 40px;
+    right: 35px;
   }
   100% {
-    padding-right: 20px;
+    right: 15px;
   }
 }
 @keyframes bgcard {
